@@ -1,8 +1,5 @@
 # Event Finder
 
-An interview project for Sysco LABS. An iOS app that lets you find events using the Seat Geek API. The type ahead updates a list of results as the search query changes. Results can be tapped to view them on a details screen and added as a favorite for later.
-
-**Note:** Dark mode support for iOS 13 is added in a separate branch called `dark_mode`. It is not merged with `master` yet because it will require using Xcode 11.
 
 ### Requirements
 
@@ -16,10 +13,10 @@ An interview project for Sysco LABS. An iOS app that lets you find events using 
 Clone the GIT repository:
 
 ```
-git clone git@github.com:chesstep/EventFinder.git
+git clone git@github.com:Nethrah/EventFinder.git
 ```
 
-After the repository is cloned you should run `pod update` from the local directory. This will download the necessary dependencies and generate `EventFinder.xcworkspace`
+After the repository is cloned you should run `pod install` from the local directory. This will download the necessary dependencies and generate `EventFinder.xcworkspace`
 
 ### Running the project
 
