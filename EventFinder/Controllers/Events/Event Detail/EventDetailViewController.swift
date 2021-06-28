@@ -35,8 +35,9 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         configureUI()
+        print(event.formattedString)
     }
     
     @IBAction func eventFavAction(_ sender: Any) {
@@ -44,17 +45,13 @@ class EventDetailViewController: UIViewController {
     }
     func configureUI() {
         presenter.attachView(view: self)
-        
+        let backBarBtnItem = UIBarButtonItem()
+        backBarBtnItem.title = "back"
+       // self.navigationController?.navigationItem.backBarButtonItem?.title = backBarBtnItem
         title = "Details"//event.title
         extendedLayoutIncludesOpaqueBars = true
-        eventNameLabel.text = event.title
-        
-        //rightBarButton = UIBarButtonItem(image: UIImage(named: "heart_empty"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(rightBarButtonPressed(sender:)))
-        //rightBarButton.tintColor = UIColor.red
-       // navigationItem.rightBarButtonItems = [rightBarButton]
+        eventNameLabel.text = event.formattedString
         presenter.configureButtonImage(event: event)
-        
-        //eventImageView.layer.cornerRadius = 10
         if let imageString = event.imageURL, let url = URL(string: imageString) {
             eventImageView.kf.setImage(with: url)
         }

@@ -2,7 +2,7 @@
 //  AuthenticatorProtocol.swift
 //  EventFinder
 //
-//  Created by Nethrah Ayyaswami on 06/28/2021on 6/20/19.
+//  Created by Nethrah Ayyaswami on 06/28/2021.
 //  
 //
 

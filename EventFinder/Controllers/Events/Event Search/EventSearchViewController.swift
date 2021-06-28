@@ -61,7 +61,7 @@ class EventSearchViewController: UIViewController {
     func configureUI() {
         presenter.attachView(view: self)
         tableView.separatorStyle = .none
-        title = NSLocalizedString("SeatGreek Finder", comment: "")
+        //title = NSLocalizedString("SeatGreek Finder", comment: "")
         extendedLayoutIncludesOpaqueBars = false
         
         tableView.register(UINib(nibName: String(describing: EventSearchCell.self), bundle: nil), forCellReuseIdentifier: String(describing: EventSearchCell.self))

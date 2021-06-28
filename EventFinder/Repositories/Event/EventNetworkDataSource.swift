@@ -2,7 +2,7 @@
 //  EventNetworkDataSource.swift
 //  EventFinder
 //
-//  Created by Nethrah Ayyaswami on 06/28/2021on 9/19/19.
+//  Created by Nethrah Ayyaswami on 06/28/2021.
 //  
 //
 
@@ -35,7 +35,7 @@ class EventNetworkDataSource: EventDataSource {
     }
     
     func queryEvents(query: String, completion: EventDataSourceCompletion?) {
-        let parameters = ["q": query,"per_page": "50"] 
+        let parameters = ["q": query,"per_page": "100"] 
         let authenticator = SeatGeekAuthenticator()
         let requestConfiguration = RequestConfiguration(endpoint: "https://api.seatgeek.com/2/events", httpMethod: .get, authenticator: authenticator, parameters: parameters)
         networkManager.executeRequest(requestConfiguration: requestConfiguration, responseModel: EventNetworkModel.self) { result in

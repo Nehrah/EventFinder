@@ -30,7 +30,7 @@ class EventSearchCell: UITableViewCell {
         } else {
             eventImageView.image = nil
         }
-        eventTitleLabel.text = event.title
+        eventTitleLabel.text = event.formattedString
         eventLocationLabel.text = event.formattedCityState
         if let date = event.date {
             eventDateLabel.text = DateFormatter.eventFormatter.string(from: date)
@@ -38,29 +38,29 @@ class EventSearchCell: UITableViewCell {
     }
 }
 extension UITableViewCell{
-func shadowAndBorderForCell(EventSearchCell : UITableViewCell){
-// SHADOW AND BORDER FOR CELL
-//EventSearchCell.contentView.layer.cornerRadius = 5
-    if #available(iOS 13.0, *) {
-        EventSearchCell.backgroundColor = UIColor.systemGray6
-    } else {
-        EventSearchCell.backgroundColor = UIColor.systemGray
+    func shadowAndBorderForCell(EventSearchCell : UITableViewCell){
+        // SHADOW AND BORDER FOR CELL
+        //EventSearchCell.contentView.layer.cornerRadius = 5
+        if #available(iOS 13.0, *) {
+            EventSearchCell.backgroundColor = UIColor.systemGray6
+        } else {
+            EventSearchCell.backgroundColor = UIColor.systemGray
+        }
+        EventSearchCell.contentView.layer.borderWidth = 2
+        //EventSearchCell.contentView.layer.borderColor = UIColor.lightGray.cgColor
+        EventSearchCell.contentView.layer.masksToBounds = false
+        EventSearchCell.layer.shadowColor = UIColor.lightGray.cgColor
+        EventSearchCell.layer.shadowOffset = CGSize(width: 3, height: 3.0)
+        EventSearchCell.layer.shadowRadius = 6.0
+        EventSearchCell.layer.shadowOpacity = 0.7
+        EventSearchCell.layer.masksToBounds = false
+        EventSearchCell.layer.cornerRadius = 2
+        
+        
+        /*EventSearchCell.layer.shadowPath = UIBezierPath(roundedRect:EventSearchCell.bounds, cornerRadius:EventSearchCell.contentView.layer.cornerRadius).cgPath*/
+        EventSearchCell.layer.shadowPath = UIBezierPath(rect: EventSearchCell.bounds).cgPath
+        
+        
     }
-EventSearchCell.contentView.layer.borderWidth = 2
-//EventSearchCell.contentView.layer.borderColor = UIColor.lightGray.cgColor
-EventSearchCell.contentView.layer.masksToBounds = false
-EventSearchCell.layer.shadowColor = UIColor.lightGray.cgColor
-    EventSearchCell.layer.shadowOffset = CGSize(width: 3, height: 3.0)
-EventSearchCell.layer.shadowRadius = 6.0
-    EventSearchCell.layer.shadowOpacity = 0.7
-EventSearchCell.layer.masksToBounds = false
-    EventSearchCell.layer.cornerRadius = 2
-    
-   
-/*EventSearchCell.layer.shadowPath = UIBezierPath(roundedRect:EventSearchCell.bounds, cornerRadius:EventSearchCell.contentView.layer.cornerRadius).cgPath*/
-    EventSearchCell.layer.shadowPath = UIBezierPath(rect: EventSearchCell.bounds).cgPath
-    
-  
-}
 }
 

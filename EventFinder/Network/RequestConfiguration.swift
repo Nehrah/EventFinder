@@ -2,7 +2,7 @@
 //  RequestConfiguration.swift
 //  EventFinder
 //
-//  Created by Nethrah Ayyaswami on 06/28/2021on 6/24/19.
+//  Created by Nethrah Ayyaswami on 06/28/2021.
 //  
 //
 

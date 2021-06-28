@@ -2,7 +2,7 @@
 //  Event.swift
 //  EventFinder
 //
-//  Created by Nethrah Ayyaswami on 06/28/2021on 9/19/19.
+//  Created by Nethrah Ayyaswami on 06/28/2021.
 //  
 //
 
@@ -18,7 +18,15 @@ struct Event: Codable & Hashable {
     let imageURL: String?
    // let total:Int?
     ///let page:Int?
-    
+    var formattedString:String{
+        if let index = title.firstIndex(of: "-") {
+        let firstPart = title.prefix(upTo: index)
+        return String(firstPart)
+    }
+    else{
+        return title
+    }
+    }
     var formattedCityState: String {
         var cityState = "\(city)"
         if let state = state {
