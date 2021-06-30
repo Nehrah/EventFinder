@@ -2,7 +2,7 @@
 //  EventLocalDataSourceTests.swift
 //  EventFinderTests
 //
-//  Created by Nethrah Ayyaswami on 06/28/2021on 9/20/19.
+//  Created by Nethrah Ayyaswami on 06/28/2021.
 //  
 //
 
